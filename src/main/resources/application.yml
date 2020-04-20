@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: sso-web
+
+  # redis sentinel 集群
+  redis:
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    sentinel:
+      master: mymaster
+      nodes: 10.211.55.12:26379, 10.211.55.12:26380, 10.211.55.12:26381
+
+server:
+  port: 8080
+
+# 单点登陆服务地址
+sso.hosts: http://localhost:8989
