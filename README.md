@@ -1,1 +1,1 @@
-# SSO 单点登录客户端
+# SpringBoot SSO 单点登录消费端
